@@ -18,6 +18,7 @@ public class Consigna {
         Integer numeroB = entrada.nextInt();
         System.out.println("Ingresa el tercer numero: ");
         Integer numeroC = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("El valor máximo de los ingresados es: "+maximoEntreTresNumeros(numeroA, numeroB, numeroC));
 
         System.out.println("******************************");
@@ -42,11 +43,7 @@ public class Consigna {
         return true;
     }
     public static boolean esDivisible(int n, int divisor){
-       if (n % divisor == 0){
-           return true;
-       }else {
-           return false;
-       }
+        return n % divisor == 0;
     }
 
     // Maximo valor
