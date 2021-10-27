@@ -1,5 +1,6 @@
 package Clase3;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DesafiosProgramas {
@@ -163,7 +164,40 @@ public class DesafiosProgramas {
         System.out.println("¿Cuantos números primos quieres ver?");
         System.out.println("Ingresa la cantidad de numeros primos quires ver: ");
         int cantidadPrimos = this.entrada.nextInt();
+        int contador = 0;
+        System.out.println("Los primeros "+cantidadPrimos+ " numeros primos son: ");
+        int numero = 2;
+        while(contador < cantidadPrimos){
+            if(esPrimo(numero)){
+                contador++;
+                System.out.print(numero+" ");
+                numero++;
+            }else {
+                numero++;
+            }
+        }
 
+    }
+    public static boolean esPrimo(int numero) {
+        if (numero == 0 || numero == 1 || numero == 4) {
+            return false;
+        }
+        for (int x = 2; x < numero / 2; x++) {
+            if (numero % x == 0)
+                return false;
+        }
+        return true;
+    }
+    public void desafio4() {
+        System.out.println("Ingresa la cantida de horas que trabajaste esta semana: ");
+        int horas = entrada.nextInt();
+        double pago;
+        if (horas > 40){
+            pago = horas * 875 + (horas-40)*875*1.5;
+        } else {
+            pago = horas * 875;
+        }
+        System.out.println("El pago correspondiente a "+horas+ " trabajadas este mes es de $"+pago);
     }
 
 }
