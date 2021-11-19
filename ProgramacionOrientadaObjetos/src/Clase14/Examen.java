@@ -4,6 +4,7 @@ public abstract class Examen {
     private String titulo;
     private String enunciado;
     private double nota;
+    private Alumno alumno;
 
     public Examen(String titulo, String enunciado, double nota) {
         this.titulo = titulo;
@@ -37,5 +38,13 @@ public abstract class Examen {
 
     public void setNota(double nota) {
         this.nota = nota;
+    }
+
+    public Alumno getAlumno() {
+        return alumno;
+    }
+
+    public void setAlumno(Alumno alumno) {
+        this.alumno = alumno;
     }
 }
